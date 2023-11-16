@@ -1,137 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
-<style>
-  p {
-    color: #CC66CC;
-  }
-
-  body { 
-    margin: 0; 
-    padding: 1; 
-    font-family: Cambria, sans-serif; 
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 15px;
-    padding: 15px;
-  }
-
-  .photo {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .photo img {
-    width: 100%;
-    height: auto;
-    transition: transform .3s ease;
-  }
-
-  .photo:hover img {
-    transform: scale(1.05);
-  }
-
-  /* Responsive design */
-  @media (max-width: 300px) {
-    .gallery {
-      grid-template-columns: 1fr;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    p {
+      color: #CC66CC;
     }
-  }
-</style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, sans-serif;
+      /* background-color: #6633FF; */
+    }
+
+    .gallery {
+      display: grid;
+      
+      /* background-color: #2196F3; */
+      grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+      grid-template-rows: minmax(auto-fit, max-content) repeat(auto-fill, 200px);
+        /* grid-template-columns: repeat(4, 100px); */
+      /* grid-template-rows: repeat(2, 250px); */
+      grid-gap: 15px;
+      padding: 15px;
+    }
+
+    .photo {
+      position: relative;
+      background-color: rgb(0, 0, 0);
+      border-width: 2px;
+      border-color: #000000;
+      overflow: visible;
+      padding: auto;
+      margin: auto;
+      /* max-width: 200px;
+      max-height: 200px;
+      min-width: 150px;
+      min-height: 150px; */
+    }
+
+    .photo-box {
+      width: 100%;
+      height: 100%;
+      max-height: 75vh;
+      max-width: 20vw;
+      object-fit: fill;
+      transition: transform .3s ease;
+      /* transform: scale(.80); */
+    }
+
+    .sliver {
+      width: 100%;
+      height: 100%;
+      max-height: 75vh;
+      max-width: 20vw;
+      object-fit: cover;
+      transition: transform .3s ease;
+      /* transform: scale(.80); */
+      padding: 0;
+      margin: 0;
+    }
+
+    .photo:hover img {
+      transform: scale(1.33);
+    }
+
+    /* Responsive design */
+    @media (max-width: 200px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Welcome to my Portfolio</h1>
-  <title>Portfolio:</title></head>
-<body><p style="color: #6633FF">Hi, I'm Sheree S! This is my mixed-media art portfolio.</p>
-<p>Images are created through physical mediums, as well as through digital means. 
-<a href="mailto: xssluxe@gmail.com">Email me at xssluxe@gmail.com</a> for any questions, comments or tips! </a> 
-</p> 
-</header>
-  
-  <main>
-  <section class="gallery">
-    <div class="photo">
-<h2>Personal Art</h2> 
-      <div class="photo"><img src="static/IMG_1875.png" alt=“digital vector blend”></div>
-    <div class="photo"><img src="/static/IMG_7197.jpeg" alt=“photocollage”></div>
-   <div class="photo"><img src="/static/IMG_7196.jpeg" alt=“photocollage”></div>
-    <div class="photo"><img src="/static/IMG_7198.jpeg" alt=“photocollage”></div>
-     <div class="photo"><img src="/static/IMG_7199.jpeg" alt=“photocollage”></div>
-  </section>
-</main>
+  <header>
 
-<main>
-  <section class=“gallery”>
-    <div class="photo">
-<h2>Adobe Firefly 2</h2>
-      <div class="photo"><img src="/static/File-1.jpg" alt=“generative image”></div>
-    <div class="photo"><img src="/static/File-2.jpg" alt=“generative image”></div>
-    <div class="photo"><img src="/static/File-3.jpg" alt=“generative image”>
-   </div>
-   <div class="photo"><img src="/static/File-4.jpg" alt=“generative image”></div>
-   <div class="photo"><img src="/static/File-5.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-6.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-7.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-8.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-9.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-10.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-11.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-12.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-13.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/File-14.jpg" alt=“generative image”></div>
-  <div class="photo"><img src="/static/412ai-file.png" alt=“generative image”></div>
-  </section>
-</main>
+    <h1>Welcome to my Portfolio</h1>
+    <title>Portfolio:</title>
 
+    <p style="color: #6633FF">Hi, I'm Sheree S! This is my mixed-media art portfolio.</p>
+    <p>Images are created through physical mediums, as well as through digital means. <a href="mailto: xssluxe@gmail.com">Email me for any questions, comments or tips!</a>
+    </p>
+    <!--   
+        
+      </p> -->
+  </header>
 
-<main>
-  <section class=“gallery”>
-    <div class="photo">
-<h2>Dream by Wombo</h2>
-<div class="photo"><img src="static/99ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/365ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/25ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/135ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/307ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/392ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/393ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/396ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/394ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/379ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/286ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/313ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/164ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/12ai-file.JPG" alt=“generative image”></div>
-<div class="photo"><img src="static/153ai-file.JPG" alt=“generative image”></div>
-  </section>
-</main>
-
-
-<main>
-  <section class=“gallery”>
-    <div class="photo">
-<h2>Photography</h2>
-<div class="photo"><img src="static/photo1.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo2.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo3.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo4.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo5.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo6.jpeg" alt=“photography”></div>
-<div class="photo"><img src="static/photo7.jpeg" alt=“photography”></div>
+  <main><h2>Personal Art</h2>
+    <section class="gallery">
+      <div class="photo"><img class="photo-box" src="static/IMG_1875.png" alt="digital vector blend" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/IMG_7197.jpeg" alt="photocollage" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/IMG_7198.jpeg" alt="photocollage" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/IMG_7199.jpeg" alt="photocollage" width="150px" height="400"></div>
     </section>
-</main>
+  </main>
 
-<footer>
-  <p>Copyright © Sheree Sipots. All rights reserved.</p>
-</footer>
+  <main><h2>Adobe Firefly 2</h2>
+    <section class="gallery">
+      <div class="photo"><img class="sliver" src="static/File-1.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-2.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-3.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-4.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-5.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-6.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-7.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-8.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-9.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-10.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-11.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-12.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-13.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/File-14.jpg" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="sliver" src="static/412ai-file.png" alt="generative image" width="150px" height="400"></div>
+    </section>
+  </main>
+
+
+  <main><h2>Dream by Wombo</h2>
+    <section class="gallery">
+      <div class="photo"><img class="photo-box" src="static/99ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/365ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/25ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/135ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/307ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/392ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/393ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/396ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/396ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/394ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/379ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/286ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/313ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/164ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/12ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/153ai-file.JPG" alt="generative image" width="150px" height="400"></div>
+    </section>
+  </main>
+
+
+  <main><h2>Photography</h2>
+    <section class="gallery">
+      <div class="photo"><img class="photo-box" src="static/photo1.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo2.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo3.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo4.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo5.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo6.jpeg" alt="photography" width="150px" height="400"></div>
+      <div class="photo"><img class="photo-box" src="static/photo7.jpeg" alt="photography" width="150px" height="400"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © Sheree Sipots. All rights reserved.</p>
+  </footer>
 
 </body>
-</html>
+<!-- </html> -->
