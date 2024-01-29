@@ -8,6 +8,4 @@ If using any images for personal or commercial use, please feel free to send a m
 
 <p>I'd love to hear from you! 
 xx 
-<a href="https://luxsheree.github.io"> Visit My Portfolio Here! </a>
-
-![Untitled (19)](https://github.com/luxsheree/luxsheree.github.io/assets/147013007/3d1d4309-6b8d-4dec-ae90-fd20e93c9725)
+<a href="https://luxsheree.github.io"> Portfolio </a>
