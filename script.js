@@ -128,5 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
     bgColorInput.addEventListener('change', function() {
       previewArea.style.backgroundColor = bgColorInput.value;
     });
-  });
-  
+ });
