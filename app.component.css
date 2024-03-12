@@ -110,13 +110,13 @@
       
       .glitch::before {
         left: 2px;
-        text-shadow: -1px 0 red;
+        text-shadow: -2px 0 rgb(255, 0, 0);
         animation: glitch-anim 3s infinite linear alternate-reverse;
       }
       
       .glitch::after {
         left: -2px;
-        text-shadow: 1px 0 blue;
+        text-shadow: 3px 0 rgb(0, 247, 255);
         animation: glitch-anim2 2s infinite linear alternate-reverse;
       }
       
@@ -533,27 +533,35 @@
       .photo:hover img {
        transform: scale(1.33);
     }
-    
-#storybook-widget {
-  border: 6px dotted #f285e5;
-  padding: 20px;
-  border-radius: 10px;
+  
+#crystal-ball-container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
 }
 
-#next-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #faa7ec;
-  color: rgb(0, 0, 0);
-  border: none;
+#crystal-ball {
+  border-radius: 50%;
+  width: 600px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#answer {
+  padding: 20px;
+  text-align: center;
+}
+
+#question {
+  margin-bottom: 10px;
+  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
+  border: 1px solid #ffffff;
+  color: #000;
 }
 
-#next-button:hover {
-  background-color: #67f1f1;
+#ask-button:hover {
+  background-color: #51baff;
 }
-      
-       
