@@ -9,6 +9,8 @@ const answers = [
     "Most likely.",
     "Outlook good.",
     "Yes.",
+    "33",
+    "42",
     "Signs point to yes.",
     "Reply hazy, try again.",
     "Ask again later.",
@@ -54,3 +56,77 @@ questionInput.addEventListener('keypress', (e) => {
         askButton.click();
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('swatch-container');
+    const button = document.getElementById('generate-button');
+  
+    function generateSwatches(numSwatches = 10) {
+      container.innerHTML = ''; // Clear existing swatches
+  
+      for (let i = 0; i < numSwatches; i++) {
+        const swatch = document.createElement('div');
+        swatch.classList.add('swatch');
+        const color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        swatch.style.backgroundColor = color;
+        swatch.textContent = color; // Displays the color code on the swatch
+        swatch.setAttribute('title', 'Click to copy hex code');
+        container.appendChild(swatch);
+  
+        swatch.addEventListener('click', function() {
+          copyToClipboard(this.textContent);
+          showCopiedMessage(this);
+        });
+      }
+    }
+  
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+  
+    function showCopiedMessage(element) {
+      const copiedMessage = document.createElement('span');
+      copiedMessage.textContent = 'Copied!';
+      copiedMessage.className = 'copied-message';
+      element.appendChild(copiedMessage);
+  
+      setTimeout(() => {
+        element.removeChild(copiedMessage);
+      }, 1500); // Adjust the duration as needed
+    }
+  
+    // Initial generation of swatches
+    generateSwatches();
+  
+    button.addEventListener('click', () => generateSwatches());
+  });
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const fontSelector = document.getElementById('fontSelector');
+    const fontSizeInput = document.getElementById('fontSizeInput');
+    const fontColorInput = document.getElementById('fontColorInput');
+    const bgColorInput = document.getElementById('bgColorInput');
+    const previewArea = document.getElementById('previewArea');
+  
+    fontSelector.addEventListener('change', function() {
+      previewArea.style.fontFamily = fontSelector.value;
+    });
+  
+    fontSizeInput.addEventListener('input', function() {
+      previewArea.style.fontSize = fontSizeInput.value + 'px';
+    });
+  
+    fontColorInput.addEventListener('change', function() {
+      previewArea.style.color = fontColorInput.value;
+    });
+  
+    bgColorInput.addEventListener('change', function() {
+      previewArea.style.backgroundColor = bgColorInput.value;
+    });
+  });
+  

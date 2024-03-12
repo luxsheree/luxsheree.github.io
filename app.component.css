@@ -285,19 +285,18 @@
       .container {
         font-family: 'Courier New', Courier, monospace;
         font-size: 24px;
-        margin: 25px;
-        width: 350px;
-        height: 600px;
-        outline: 8px ridge rgba(240, 37, 179, 0.6);
-        border-radius: 2rem;
-        margin: 0 auto;
-        box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.2);
+        width: 540px;
+        height: 300px;
+        outline: 9px solid inset rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        margin: 0 auto; margin-top: 15px;
+        box-shadow: 12px 12px 2px 1px rgba(0, 94, 255, 0.2);
       }
     
       .child {
-        width: 300px;
+        width: 400px;
         height: 300px;
-        background-color: rgb(247, 107, 184);
+        background-color: rgb(220, 220, 220);
         /* Center horizontally*/
         margin: 0 auto;
         display: flex;
@@ -607,7 +606,67 @@ cursor: pointer; /* Change mouse cursor to pointer when hovering over the button
 .padding-box-1 {
   background-clip: padding-box;
 }
-.content-box-1 {
+.content-box {
   background-clip: content-box;
 }
+
+#swatch-container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px); /* Adjust number of columns as needed */
+  gap: 10px; /* Spacing between swatches */
+  margin-bottom: 20px; /* Space between swatches and button */
+  background-color: rgba(255, 239, 239, 0.506);
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px; /* Optional: Rounds the corners of the swatches */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Color of the text inside swatch */
+  font-family: monospace;
+  font-size: 14px; /* Adjust text size as needed */
+}
+
+#generate-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  border: 2px solid #fff; /* White border */
+  font: monospace 16px; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Top/bottom padding and left/right padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.7s; /* Smooth transition for hover effects */
+  cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
+}
+.copied-message {
+  position: absolute;
+  top: -20px; /* Adjust based on your design */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.swatch {
+  position: relative; /* Needed for absolute positioning of the copied message */
+  /* Keep existing styles */
+}
+#controls {
+  margin-bottom: 20px;
+}
+
+#previewArea {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 100px;
+}
+
+
 
