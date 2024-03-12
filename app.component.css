@@ -533,5 +533,27 @@
       .photo:hover img {
        transform: scale(1.33);
     }
+    
+#storybook-widget {
+  border: 6px dotted #f285e5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #faa7ec;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#next-button:hover {
+  background-color: #67f1f1;
+}
       
        
