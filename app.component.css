@@ -466,7 +466,7 @@
     
     p {
       border: 0.8em rgb(0, 0, 0);
-      border-style: dashed;
+      border-style: inset;
       margin: 1em 0;
       padding: 1.4em;
       background: linear-gradient(60deg, rgb(252, 0, 0), yellow, rgb(101, 249, 118), rgb(42, 238, 225), rgb(255, 151, 215));
@@ -562,6 +562,52 @@
   color: #000;
 }
 
-#ask-button:hover {
-  background-color: #51baff;
+#ask-button {
+background-color: #000; /* Black background */
+color: #fff; /* White text */
+border: 2px solid #fff; /* White border */
+font-size: 16px; /* Adjust the font size as needed */
+padding: 10px 20px; /* Top/bottom padding and left/right padding */
+border-radius: 5px; /* Rounded corners */
+transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
 }
+
+#ask-button:hover {
+  background-color: #f675d6;
+}
+
+#black-button {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  border: 2px solid #fff; /* White border */
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Top/bottom padding and left/right padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
+}
+
+#black-button:hover {
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
+}
+  p-1 {
+  border: 0.8em rgb(0, 0, 0);
+  border-style: inset;
+  margin: 1em 0;
+  padding: 1.4em;
+  background: linear-gradient(60deg, rgb(50, 0, 252), rgb(0, 255, 234), rgb(101, 249, 136), rgb(42, 238, 225), rgb(255, 167, 151));
+  font: 900 1.2em monospace;
+  color:rgb(0, 0, 0)
+}
+.border-box-1 {
+  background-clip: border-box;
+}
+.padding-box-1 {
+  background-clip: padding-box;
+}
+.content-box-1 {
+  background-clip: content-box;
+}
+
